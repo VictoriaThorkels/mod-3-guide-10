@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <title>Accessibility </title>
+</head>
+
+<body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+</style>
+
+<!--nav bar with a aria-descripedby attribute to tell the listener what it is-->
+<ul>
+    <li><a href="#home" aria-describedby="home">Home</a></li>   
+</ul>
+
+<h1>Adopt a Frog Today!</h1>
+
+
+
+<div class="container"></div>
+<div class="center">
+<!--here I put a form tag for a fill out form, used to make it ovious what it is-->
+<form>
+    <h2>Fill out this form to get started</h2>
+    <!--here I gave it a label so that the listener could know the lebel of this fill out section, also in the "name" section I put a "aria-describeby" and had it connected to a span id so that the listener would know that there is editional text after the text input, with further information-->
+    <label for="name">
+        Name*
+        <input type="text" name="firstname" aria-describedby="first name">
+        <span id="first-name">First Name</span>
+        <input type="text" name="lastname" aria-describedby="last name">
+        <span id="last-name">Last Name</span>
+    </label>
+    <label for="email">
+        Email*
+        <input type="text" name="email">
+    </label>
+    <label for="message">
+        Message
+        <input type="text" name="message">
+    </label>
+    <label for="size">
+        Frog Size
+    <select name="size" id="size">
+        <option value="small">small</option>
+        <option value="medium">medium</option>
+        <option value="large">large</option>
+        <option value="xxxlarge">XXXLARGE</option>
+    </select>
+    </label> 
+</form>
+
+<button type="submit" form="adopt" value="Submit">Submit</button>
+
+</div>
+    
+</body>
+</html>
